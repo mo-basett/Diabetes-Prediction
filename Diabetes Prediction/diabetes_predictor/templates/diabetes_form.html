@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction Form</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo"> <span>Diabetes</span> <strong>PREDICTING</strong></div>
+        <nav>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'nutrition' %}">Nutrition</a>
+          <a href="#">Resources</a>
+        </nav>
+      </header>
+  <section class="container">
+    <h1>Diabetes Prediction Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label>Polyuria:</label><br>
+            <input type="radio" name="polyuria" value="1" required> Yes
+            <input type="radio" name="polyuria" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Polydipsia:</label><br>
+            <input type="radio" name="polydipsia" value="1" required> Yes
+            <input type="radio" name="polydipsia" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Sudden Weight Loss:</label><br>
+            <input type="radio" name="sudden_we" value="1" required> Yes
+            <input type="radio" name="sudden_we" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Weakness:</label><br>
+            <input type="radio" name="weakness" value="1" required> Yes
+            <input type="radio" name="weakness" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Polyphagia:</label><br>
+            <input type="radio" name="polyphagia" value="1" required> Yes
+            <input type="radio" name="polyphagia" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Genital Thrush:</label><br>
+            <input type="radio" name="genital_thr" value="1" required> Yes
+            <input type="radio" name="genital_thr" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Visual Blurring:</label><br>
+            <input type="radio" name="visual_blur" value="1" required> Yes
+            <input type="radio" name="visual_blur" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Itching:</label><br>
+            <input type="radio" name="itching" value="1" required> Yes
+            <input type="radio" name="itching" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Irritability:</label><br>
+            <input type="radio" name="irritability" value="1" required> Yes
+            <input type="radio" name="irritability" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Delayed Healing:</label><br>
+            <input type="radio" name="delayed_he" value="1" required> Yes
+            <input type="radio" name="delayed_he" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Partial Paresis:</label><br>
+            <input type="radio" name="partial_par" value="1" required> Yes
+            <input type="radio" name="partial_par" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Muscle Stiffness:</label><br>
+            <input type="radio" name="muscle_stif" value="1" required> Yes
+            <input type="radio" name="muscle_stif" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Alopecia:</label><br>
+            <input type="radio" name="alopecia" value="1" required> Yes
+            <input type="radio" name="alopecia" value="0"> No
+        </div>
+
+        <div class="form-group">
+            <label>Obesity:</label><br>
+            <input type="radio" name="obesity" value="1" required> Yes
+            <input type="radio" name="obesity" value="0"> No
+        </div>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction Result:</h2>
+        <p>{{ prediction }}</p>
+    {% endif %}
+</section>
+
+</body>
+</html>

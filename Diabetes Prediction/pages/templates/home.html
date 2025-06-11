@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Predicting</title>
+  <link rel="stylesheet" href="../static/home.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"> <span>Diabetes</span> <strong>PREDICTING</strong></div>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'nutrition' %}">Nutrition</a>
+      <a href="#">Resources</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Not sure about your symptoms?</h2>
+      <h2>This tool gives you a quick insight.</h2>
+      <br>
+      <p>Start the assessment to see if your symptoms may be linked to diabetes,Just answer a few yes or no questions, and get an instant, private result.</p>
+      <p> Please note that this is not a medical diagnosis and always consult a healthcare professional for any concerns.</p>
+      <a href="predict/" class="hero-btn">Run Prediction</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>What We Offer</h2>
+    <div class="service-grid">
+      <div class="card">
+        <h3>Blood Glucose Evaluator</h3>
+        <p> This tool helps you assess your blood sugar levels based on the type of test you performed</p>
+        <a href="{% url 'glucose_evaluator' %}" class="btn">Start</a>
+      </div>
+      <div class="card">
+        <h3>BMI calculator</h3>
+        <p>Calculate your body mass index</p><br><br>
+        <a href="{% url 'bmi_calculator' %}" class="btn">Start</a>
+      </div>
+      <div class="card">
+        <h3>Type Predictor</h3>
+        <p>Ai model to check what type of diabetes</p><br><br>
+        <a href="type/" class="btn">Start</a>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>  Diabetes Type 2 Diet</title>
+  <link rel="stylesheet" href="../static/type2.css">
+</head>
+<body>
+  <header>
+    <div class="logo"> <span>Diabetes</span> <strong>PREDICTING</strong></div>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'nutrition' %}">Nutrition</a>
+      <a href="#">Resources</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2>النظام الغذائي المقترح</h2>
+    <ul>
+      <li>الإفطار: شوفان بالحليب خالي الدسم + مكسرات غير مملحة.</li>
+      <li>الغداء: سمك مشوي + كوب كينوا أو أرز بني + طبق سلطة خضراء.</li>
+      <li>العشاء: سلطة تونة بزيت الزيتون + خبز قمح كامل + زبادي لايت.</li>
+    </ul>
+    <h2>الأكلات الممنوعة لمريض السكر النوع الثاني</h2>
+    <table class="meal-table">
+      <thead>
+        <tr>
+          <th>نوع الأكل</th>
+          <th>امثلة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td> الحلويات  </td><td>   البسكويت، والمثلجات والكيك، </td></tr>
+        <tr><td> المشروبات المحلاة بالسكر</td><td> المشروبات الغازية والعصائر المحلاة</td></tr>
+        <tr><td>اللحوم الغنية بالدهون</td><td> لحم البقر والضأن</td></tr>
+        <tr><td>الدهون المتحولة</td><td>  السمن المُصنع، والمقليات، ومبيضات القهوة.</td></tr>
+        <tr><td>الأطعمة المصنعة </td><td> رقائق البطاطس (الشيبسي)، وفشار الميكروويف، واللحوم المصنعة، والوجبات الجاهزة.</td></tr>
+        <tr><td>الأطعمة السريعة</td><td>تُقلل منها قدر الإمكان</td></tr>
+        <tr><td>الخبز الأبيض والمعكرونة.</td><td> </td></tr>
+      </tbody>
+    </table>
+
+    
+  </section>
+
+</body>
+</html>

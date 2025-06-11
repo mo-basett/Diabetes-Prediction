@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blood Glucose Evaluator</title>
+  <link rel="stylesheet" href="../static/glucose.css">
+</head>
+<body>
+  <header>
+    <div class="logo"> <span>Diabetes</span> <strong>PREDICTING</strong></div>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'nutrition' %}">Nutrition</a>
+      <a href="#">Resources</a>
+    </nav>
+  </header>
+  <br>
+  <div class="all">
+  <div class="container">
+    <h2>Blood Glucose Evaluator</h2>
+    <label for="testType">Select Test Type:</label>
+    <select id="testType">
+      <option value="fasting">Fasting</option>
+      <option value="postMeal">2 Hours After Eating</option>
+      <option value="hba1c">HbA1c</option>
+    </select>
+
+    <label for="unit">Select Unit:</label>
+    <select id="unit">
+      <option value="mg">mg/dL</option>
+      <option value="mmol">mmol/L</option>
+    </select>
+
+    <label for="value">Enter Glucose Value:</label>
+    <input type="number" id="value" placeholder="Enter value">
+
+    <button id="checkBtn">Check</button>
+
+    <div id="output" class="result"></div>
+  </div>
+</div>
+
+  <script src="../static/glucose.js"></script>
+</body>
+</html>

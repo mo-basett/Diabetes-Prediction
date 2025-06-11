@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Type 1 Diet</title>
+  <link rel="stylesheet" href="../static/type1.css">
+</head>
+<body>
+  <header>
+    <html lang="en" dir="rtl">
+    <div class="logo"> <span>Diabetes</span> <strong>PREDICTING</strong></div>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'nutrition' %}">Nutrition</a>
+      <a href="#">Resources</a>
+    </nav>
+    </html>
+  </header>
+
+  <section class="content">
+     <h2>النظام الغذائي المقترح</h2>
+    <ul>
+      <li>الإفطار: 2 شريحة توست بني + بيض مسلوق + خيار وطماطم + كوب لبن خالي الدسم.</li>
+      <li>الغداء: ½ كوب أرز بسمتي + صدر دجاج مشوي + طبق سلطة خضرا + ملعقة زيت زيتون.</li>
+      <li>العشاء: شوربة عدس + شريحة توست بني + زبادي يوناني.</li>
+    </ul>
+    <h2>الأكلات الممنوعة لمريض السكر النوع الأول</h2>
+    <table class="meal-table">
+      <thead>
+        <tr>
+          <th>نوع الأكل</th>
+          <th>الحالة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>العصائر والمشروبات الغازية</td><td>مسموح بكميات محسوبة</td></tr>
+        <tr><td>الخبز الأبيض والمعجنات</td><td>مسموح مع حساب الكربوهيدرات</td></tr>
+        <tr><td>المقليات والوجبات السريعة</td><td>أحيانًا</td></tr>
+        <tr><td>اللحوم المصنعة</td><td>غير مفضلة</td></tr>
+        <tr><td>السكريات البسيطة</td><td>مسموح مع ضبط الجرعة</td></tr>
+        <tr><td>الوجبات السريعة والأطعمة الغنية بالدهون. </td><td>ممنوع</td></tr>
+      </tbody>
+    </table>
+
+   
+  </section>
+
+</body>
+</html>

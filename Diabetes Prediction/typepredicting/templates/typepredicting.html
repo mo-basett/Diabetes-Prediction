@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> <span>Diabetes</span> <strong>PREDICTING</strong></div>
+        <nav>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'nutrition' %}">Nutrition</a>
+          <a href="#">Resources</a>
+        </nav>
+      </header>
+
+    <section class="container">
+        <h1>Type Predicting Model</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group"><label>Insulin Levels:</label> <input type="number" name="Insulin Levels" required></div>
+            <div class="form-group"><label>Age:</label> <input type="number" name="Age" required></div>
+            <div class="form-group"><label>BMI:</label> <input type="number" name="BMI" required></div>
+            <div class="form-group"><label>Blood Pressure:</label> <input type="number" name="Blood Pressure" required></div>
+            <div class="form-group"><label>Cholesterol Levels:</label> <input type="number" name="Cholesterol Levels" required></div>
+            <div class="form-group"><label>Waist Circumference:</label> <input type="number" name="Waist Circumference" required></div>
+            <div class="form-group"><label>Blood Glucose Levels:</label> <input type="number" name="Blood Glucose Levels" required></div>
+            <div class="form-group"><label>Pancreatic Health:</label> <input type="number" name="Pancreatic Health" required></div>
+            <div class="form-group"><label>Pulmonary Function:</label> <input type="number" name="Pulmonary Function" required></div>
+            <div class="form-group"><label>Neurological Assessments:</label> <input type="number" name="Neurological Assessments" required></div>
+            <div class="form-group"><label>Digestive Enzyme Levels:</label> <input type="number" name="Digestive Enzyme Levels" required></div>
+        
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+        {% if error %}
+            <h2 style="color: red;">Error: {{ error }}</h2>
+        {% endif %}
+    </section>
+    
+</body>
+</html>
